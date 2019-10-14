@@ -3,6 +3,9 @@
 
 #define NFOIS 5
 
+
+//Debut de l'apprentissage langage C - Ludus Academie - DRUCKES Lucas - 14 10 2019
+
 int main(int argc, char *argv[]) // 1
 {
     int i;
