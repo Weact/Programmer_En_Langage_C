@@ -186,7 +186,7 @@ Boolean j_FinJeu()
     {
         for(j = 0; j<TAILLE; j++)
         {
-            if(j_TabMorpion[i-1][j-1] == VIDE;
+            if(j_TabMorpion[i-1][j-1] == VIDE)
             {
                 printf("MATCH NUL !");
                 return FALSE;
