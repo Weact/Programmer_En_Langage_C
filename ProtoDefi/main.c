@@ -1,8 +1,7 @@
-#include "lib/socket.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "lib/methodes.h"
-
+#include "lib/methodes.c"
+#include "lib/socket.c"
 
 int main(void)
 {
