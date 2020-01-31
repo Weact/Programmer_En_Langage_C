@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
+#include "mainpile.h"
 //PS: ce .c n'est pas propre.
 //PS2: l'autre .c est propre.
 
@@ -215,13 +216,13 @@ void s(n) //Line method
 
 void pile_c()
 {
-    Pile *maPile = initialisation();
+    objPile *maPileObj = initialisationObj();
     int continuer = 1;
     int rep;
     int choix;
     while(continuer != 0)
     {
-        afficherPile(maPile);
+        afficherPileObj(maPileObj);
         printf("Voulez vous ajouter ou supprimer des elements dans la Pile ?\n");
         printf("Quitter(0) Ajouter(1) Supprimer(2)\n");
         scanf("%d",&choix);
@@ -240,19 +241,19 @@ void pile_c()
             printf("Quel nombre voulez vous ajouter dans la Pile ?\n");
             scanf("%d",&rep);
             fflush(stdin);
-            empiler(maPile,rep);
+            empilerObjEmpty(maPileObj, 1, 5, 10, 3, "ludus");
             system("cls");
             printf("empilage reussi\n\n");
         }
         else if(choix == 2)
         {
-            if(maPile->nbElement < 1)
+            if(maPileObj->nbElement < 1)
             {
                 system("cls");
                 printf("depilage impossible (La Pile est vide)\n\n");
             }else
             {
-                depiler(maPile);
+                depilerObjDebut(maPileObj);
                 system("cls");
                 printf("depilage reussi\n\n");
             }
@@ -276,7 +277,7 @@ void pile_c()
         system("cls");
     }
     system("cls");
-    afficherPile(maPile);
+    afficherPileObj(maPileObj);
 
 }
 
