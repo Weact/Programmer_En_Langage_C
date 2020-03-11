@@ -8,7 +8,7 @@
 
 //CIBLE : main.c
 
-//CIBLE : socket.h
+//CIBLE : socket.c
 void initSocket();
 void closeSocket();
 

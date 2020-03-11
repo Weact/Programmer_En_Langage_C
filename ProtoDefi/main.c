@@ -20,8 +20,8 @@ int main(void)
     bind(sock, (SOCKADDR*)&sin, sizeof(sin));
 
     listen(sock, 5);
-    socklen_t taille = sizeof(csin);
-    csock = accept(sock , (SOCKADDR*)&csin, &taille);
+    socklen_t taille = sizeof(sin);
+    sock = accept(sock , (SOCKADDR*)&sin, &taille);
 
     closesocket(sock);
 
